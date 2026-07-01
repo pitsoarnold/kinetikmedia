@@ -77,14 +77,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "KINETIK Media Solutions — Design · Brand · Impact" },
+      { name: "description", content: "Africa's next-generation creative studio. We engineer momentum through brand design, creative media, digital innovation and marketing." },
+      { name: "author", content: "KINETIK Media Solutions" },
+      { name: "theme-color", content: "#151b54" },
+      { property: "og:title", content: "KINETIK Media Solutions — Design · Brand · Impact" },
+      { property: "og:description", content: "We build brands that move. Brand design, creative media, digital innovation and marketing from Southern Africa." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
       {
@@ -92,6 +92,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         href: appCss,
       },
       { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap",
+      },
     ],
   }),
   shellComponent: RootShell,
