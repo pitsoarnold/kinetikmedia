@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 @import "tailwindcss" source(none);
 @source "../src";
 @import "tw-animate-css";
@@ -111,6 +112,9 @@
   --sidebar-accent-foreground: oklch(0.208 0.042 265.755);
   --sidebar-border: oklch(0.929 0.013 255.508);
   --sidebar-ring: oklch(0.704 0.04 256.788);
+  --font-display: "Space Grotesk", system-ui, sans-serif;
+  --font-serif: "Instrument Serif", Georgia, serif;
+  --font-sans: "Space Grotesk", system-ui, sans-serif;
 }
 
 .dark {
@@ -188,4 +192,39 @@
   background-size: 32px 32px;
   background-position: -1px -1px;
   opacity: 0.06;
+}
+
+@keyframes marquee-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes mural-float {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  50% { transform: translate(-8px, 8px) rotate(2deg); }
+}
+
+.accent-serif {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 0.95em;
+  letter-spacing: -0.01em;
+}
+
+.animate-marquee-slow {
+  animation: marquee-scroll 40s linear infinite;
+}
+
+.animate-mural-float {
+  animation: mural-float 12s ease-in-out infinite;
+}
+
+.hero-gradient {
+  background: linear-gradient(
+    to top,
+    rgba(21, 27, 84, 0.95) 0%,
+    rgba(21, 27, 84, 0.6) 40%,
+    rgba(21, 27, 84, 0.3) 100%
+  );
 }
